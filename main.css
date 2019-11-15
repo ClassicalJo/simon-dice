@@ -1,0 +1,133 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3A3238;
+}
+
+body {
+    background-color: #F5E3E0;
+    height: 100vh;
+    width: 100vh;
+}
+
+.container {
+    height: 30em;
+    width: 50em;
+    display: grid;
+    grid-template-rows: 12.5% 87.5%;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: 
+    "algo header"
+    "sidebar main";
+}
+
+.header {
+    grid-area: header;
+}
+
+h1 {
+    margin: 0%;
+    text-align: center;
+    text-shadow: 1px 1px white ;
+}
+
+.sidebar-container {
+    height: 100%;
+    grid-area: sidebar;
+    display: grid;
+    font-size: small;
+    overflow: hidden hidden;
+    align-content: center;
+}
+
+.sidebar-container > div {
+    margin-top: 2em;
+}
+
+.sidebar-container > div > div{
+    margin-top: 1em;
+}
+
+.custom {
+    background-color: #E8B4BC;
+
+}
+
+.texto-timer {
+    display: grid;
+    justify-content: center;
+}
+.timer {
+    background-color: white;
+    border: 1px solid black;
+    color: purple;
+    font-size: large;;
+    padding-left: 25%;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 12.5% 75% 12.5% ;
+    grid-template-areas: 
+    "bienvenida"
+    "simon"
+    "comenzar";
+
+    text-align: center;
+    justify-content: center;
+}
+
+.main > span {
+    align-self: center;
+    grid-area: bienvenida;
+}
+
+
+.simon-container {
+    grid-area: simon;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    "number number"
+    "number number";
+    align-self: start;
+    margin-top: 2em;
+    justify-self: center;
+    box-shadow: 3px 3px 3px -1px rgba(0,0,0,.4);
+    background-color: black;
+    border: 2px solid black
+}
+
+
+.boton {
+    border: 2px solid transparent;
+    width: 7.5em;
+    height: 7.5em;
+}
+
+.botonpresionado {
+    filter: opacity(75%);
+}
+
+img.boton:hover{
+    border: 2px solid white;
+}
+
+.left {
+    justify-self: right;
+}
+input[id=comenzar]{
+    grid-area: comenzar;
+    margin-bottom: 1em;
+    justify-self: center;
+    width: 20em;
+    background-color: #E8B4BC;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.deshabilitar-mouse {
+    pointer-events: none;
+}

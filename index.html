@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Simon dice</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Simon dice!</h1>
+        </div>
+        <div class="sidebar-container">
+            <div>El juego consiste en seguir la secuencia. <div>Simon te va a dar una secuencia y vos tenes que seguirla
+                    apretando los botones apropiados.</div>
+            </div>
+            <div>Las dificultades son:
+                <div>Facil: 10 segundos para introducir la secuencia, 5 exitos para ganar</div>
+                <div>Medio: 5 segundos para introducir la secuencia, 10 exitos para ganar</div>
+                <div>Dificil: 2 segundos para introducir la secuencia, 15 exitos para ganar</div>
+            </div>
+            <div>Dificultad:
+                <select class="custom">
+                    <option value="5">Facil</option>
+                    <option value="10">Medio</option>
+                    <option value="15">Dificil</option>
+                </select>
+            </div>
+            <div class="texto-timer">Tiempo restante: <div class="timer">10.00</div></div>
+            
+        </div>
+        <div class="main">
+            <span>Presiona comenzar para empezar a jugar.</span>
+            <div class="simon-container">
+                <img class="boton left top" class="boton" src="images/red.png" id="rojo">
+                <img class="boton right top" src="images/yel.png" id="amarillo">
+                <img class="boton left bot" src="images/grn.png" id="verde">
+                <img class="boton right bot" src="images/blu.png" id="azul">
+            </div>
+            <input type="button" value="Comenzar" id="comenzar" onclick="comenzar()">
+        </div>
+    </div>
+    <audio class="amarillo" src="sounds/amarillo.ogg" type="audio/ogg"></audio>
+    <audio class="azul" src="sounds/azul.ogg" type="audio/ogg"></audio>
+    <audio class="rojo" src="sounds/rojo.ogg" type="audio/ogg"></audio>
+    <audio class="verde" src="sounds/verde.ogg" type="audio/ogg"></audio>
+    <audio class="error" src="sounds/error.ogg" type="audio/ogg"></audio>
+    <audio class="aplauso" src="sounds/aplauso.ogg" type="audio/ogg"></audio>
+
+    
+    <script src='funciones-juego.js'></script>
+    <script src='funciones-audiovisuales.js'></script>
+</body>
+
+</html>
